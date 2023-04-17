@@ -25,8 +25,8 @@ function App() {
       .then((response) => response.json())
       .then((json) => {
         if (json.status === 422) {
-          alert(json.message)
           setAnalysisStatus(1);
+          alert(json.message);
           return
         }
         setObservedCount(json.observedCounts);
@@ -46,7 +46,7 @@ function App() {
     return (
       <>
         {analysisStatus === 1 && <p>File Error: Please upload a valid File</p>}
-        <h2>{"Upload file to test Bedford's Law"}</h2>
+        <h2>{"Upload file to test Benford's Law"}</h2>
         <input id='fileUpload' type='file' name='file' />
         <button onClick={(e) => handleSubmit(e)} type='submit' value='Submit'>
           Submit
