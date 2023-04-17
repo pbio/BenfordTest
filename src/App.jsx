@@ -56,7 +56,7 @@ function App() {
   //received result
   return (
     <>
-      <h2>{"Results of Bedford's Law"}</h2>
+      <h2>{"Results of Benford's Law"}</h2>
       <Histogram observed={observedCount} expected={expectedCount} />
       <div>
         <p style={{ color: "red" }}>Expected</p>
